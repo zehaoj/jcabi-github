@@ -1,6 +1,5 @@
 architect:
-- amihaiemil
-- yegor256
+- zehaoj
 assets:
   secring.gpg: yegor256/home#assets/secring.gpg
   settings.xml: yegor256/home#assets/jcabi/settings.xml
