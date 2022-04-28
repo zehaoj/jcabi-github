@@ -8,7 +8,7 @@ architect:
 #   MAVEN_OPTS: -XX:MaxPermSize=256m -Xmx1g
 merge:
   script: |-
-    mvn clean install -Pjcabi-github -DskipITs -Pqulice --errors --settings ../settings.xml
+    mvn clean install -Pjcabi-github -DskipITs -Pqulice --errors
     mvn clean
 deploy:
   script: |-
