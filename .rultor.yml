@@ -1,9 +1,6 @@
 architect:
-- zehaoj
-assets:
-  secring.gpg: yegor256/home#assets/secring.gpg
-  settings.xml: yegor256/home#assets/jcabi/settings.xml
-  pubring.gpg: yegor256/home#assets/pubring.gpg
+  - zehaoj
+
 install: |-
   sudo update-java-alternatives -s java-1.8.0-openjdk-amd64
   pdd --file=/dev/null
@@ -18,13 +15,3 @@ deploy:
     mvn clean deploy -Pqulice -DskipITs --errors --settings ../settings.xml
     mvn clean
     s3cmd --no-progress put jcabi-github.xml --config=../s3cfg s3://pdd.teamed.io/jcabi-github.xml
-release:
-  script: |-
-    mvn versions:set "-DnewVersion=${tag}"
-    git commit -am "${tag}"
-    mvn clean deploy -Pqulice -Psonatype -Dinvoker.skip -DskipITs -Pjcabi --errors --settings ../settings.xml
-    mvn clean site-deploy -Psite -DskipITs -Dinvoker.skip --errors --settings ../settings.xml || echo 'site-deploy failed'
-    
-friends:
-  - yegor256/rultor
-  - jcabi/*
