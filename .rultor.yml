@@ -4,11 +4,13 @@ architect:
 install: |-
   sudo update-java-alternatives -s java-1.8.0-openjdk-amd64
   pdd --file=/dev/null
+  
 env:
   MAVEN_OPTS: -XX:MaxPermSize=256m -Xmx1g
+  
 merge:
   script: |-
-    mvn clean install -Pjcabi-github -DskipITs -Pqulice --errors --settings ../settings.xml
+    mvn clean install -DskipITs -Pqulice --errors
     mvn clean
 deploy:
   script: |-
