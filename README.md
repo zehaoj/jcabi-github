@@ -16,6 +16,8 @@
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.jcabi/jcabi-github/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.jcabi/jcabi-github)
 [![JavaDoc](https://img.shields.io/badge/javadoc-html-blue.svg)](http://www.javadoc.io/doc/com.jcabi/jcabi-github)
 
+JUST FOR TESTING!!!
+
 This is a Java adapter to the [GitHub RESTful API](https://developer.github.com/v3/).
 There are a few other similar implementations on the market, but jcabi-github has a very strong
 focus on object-oriented principles of programming. On top of that,
